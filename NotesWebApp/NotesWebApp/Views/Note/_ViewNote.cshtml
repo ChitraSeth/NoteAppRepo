@@ -1,0 +1,28 @@
+﻿@model NotesWebApp.Models.Entites.Note
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<div class="note box-shadow mb-3">
+    <header class="d-flex justify-content-between align-items-center">
+        
+
+        <div class="btns">
+            <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+            <a asp-action="Delete" asp-route-id="@Model.Id">Delete </a>
+        </div>
+    </header>
+
+    <hr>
+    <h1>@Model.Title</h1>
+    <h4>
+    <div class="d-flex justify-content-between">
+        <p class="desc">@Model.Description</p>
+
+    </div>
+    </h4>
+    <div class="d-flex justify-content-between">
+        <p class="desc">@Model.Content</p>
+    </div>
+</div>
+
